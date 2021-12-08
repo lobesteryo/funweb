@@ -1,0 +1,112 @@
+@charset
+/* 문서기본크기1200px */
+/* 초기화 */
+body, h1, h2, h3, h4, h5, h6, p, ul, dl, dd, figure, th, td, table, form {
+    margin: 0; 
+    padding: 0;
+}
+/* * {margin: 0; padding: 0;} */
+ul li {list-style: none;}
+
+a {text-decoration: none;}
+table {border-collapse: collapse;}
+fieldset {border: 0;}
+address {font-style: normal;}
+small {font-size: 1em;}
+hr {display: none;}
+.hidden {position: absolute; left: -9999px;}
+
+/* 웹폰트 */
+@font-face {
+    font-family: sejoe;
+    src: url(../webfont/segoeui.ttf), 
+    url(../webfont/segoeui.eot),
+    url(../webfont/segoeui.woff);
+}
+body {
+    font-family: 'Segoe Ui', sejoe, sans-serif;
+    min-width: 1200px;
+    position: relative;
+    overflow-y: scroll;
+}
+
+/* header */
+#header {
+    width: 1200px;
+    height: 187px;
+    margin: 0 auto;
+    position: relative;
+}
+#header h1 {
+    width: 249px;
+    /* height: 50px; */
+    padding: 90px 0 0 50px;
+}
+#header h1 a {
+    display: block;
+    height: 50px;
+    background: url(../images/logo.png) no-repeat;
+    text-indent: -9999px;
+}
+
+/* membership */
+#membership {position: absolute; top: 20px; right: 100px;} 
+#membership ul {}
+#membership ul li {
+    float: left;
+    position: relative;;
+}
+#membership ul li a {
+    color: #333;
+    font-size: 14px;
+}
+#membership ul .go_login {
+    padding-right: 10px;
+}
+#membership ul .go_login::after {
+    content:"";
+    position: absolute; top: 6px; right: 0;
+    height: 11px;
+    border-right: 1px solid red;
+}
+#membership ul .go_join {
+    padding-left: 10px;
+}
+#membership ul .go_join::before{
+    content:"";
+    position: absolute; top: 6px; left: 0;
+    height: 11px; border-left: 1px solid blue;
+}
+
+/* gnb */
+#gnb {
+    position: absolute; top: 106px; right: 100px;
+}
+#gnb ul {}
+#gnb ul li {
+    float: left; 
+    margin-left: 10px;
+}
+#gnb ul li a {
+    padding: 0 10px 10px;
+    color: #333;
+    text-transform: uppercase;
+}
+#gnb ul li a:hover {
+    border-bottom: 3px solid red;
+}
+
+/* footer */
+#footer_Wrap { margin-top: 55px; border-top: 1px solid #a0a0a0; }
+#footer { overflow: hidden; width: 1000px; margin: 0 auto;
+          padding: 24px 76px 20px 204px;
+          box-sizing: border-box;
+          background: url(../images/logoFooter.png) no-repeat 55px 23px; }
+#footer .info { float: left; font-size: 13px; }
+#footer .sns { float: right; }
+#footer .sns li { width: 33px; float: left; }
+#footer .sns li.twitter { margin-left: 17px; }
+#footer .sns li a { display: block; height: 33px;
+                    background: url(../images/bgSns.png) no-repeat;
+                    text-indent: -5000px; }
+#footer .sns li.twitter a { background-position: right; }
